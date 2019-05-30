@@ -1,3 +1,5 @@
-@media all and (min-width : 640px){
-    .sample {background-color: red;}
+@media all and (min-width: 640px) {
+    .sample {
+        background-color: red;
+    }
 }
