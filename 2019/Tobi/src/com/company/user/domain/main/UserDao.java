@@ -2,7 +2,7 @@ package com.company.user.domain.main;
 
 import java.sql.*;
 
-public class UserDao {
+public abstract class UserDao {
     /*
      JDBC를 이용하는 작업의 일반적인 순서
      1. DB 연결을 위한 Connection을 가져온다.
@@ -27,10 +27,12 @@ public class UserDao {
         connection.close();
     }
 
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver"); // Driver Load
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/study?serverTimezone=UTC", "student", "111111");
-    }
+//    private Connection getConnection() throws ClassNotFoundException, SQLException {
+//        Class.forName("com.mysql.jdbc.Driver"); // Driver Load
+//        return DriverManager.getConnection("jdbc:mysql://localhost:3306/study?serverTimezone=UTC", "student", "111111");
+//    }
+
+    public abstract Connection getConnection() throws ClassNotFoundException, SQLException;
 
     public User get(Integer id) throws ClassNotFoundException, SQLException {
         Connection connection = getConnection();
