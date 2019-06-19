@@ -38,4 +38,10 @@ public class PostingController {
     public void delete(@PathVariable Integer number){
         postingService.delete(number);
     }
+
+//    @PostMapping("/{title}")
+//    public List<Posting> getTitle(@PathVariable String title) { return postingService.getTitle(title); }
 }
+
+
+

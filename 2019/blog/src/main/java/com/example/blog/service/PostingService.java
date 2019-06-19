@@ -3,6 +3,7 @@ package com.example.blog.service;
 import com.example.blog.model.Posting;
 import com.example.blog.repository.PostingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,4 +33,10 @@ public class PostingService {
     public void delete(Integer number) {
         postingRepository.deleteById(number);
     }
+
+//    public List<Posting> getTitle(String title) {
+//        return (List<Posting>) postingRepository.findByTitle(title, Sort.by(title));
+//    }
+
+
 }
