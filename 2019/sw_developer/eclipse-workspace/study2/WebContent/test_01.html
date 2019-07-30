@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!--
+		cellspacing = "0" : 셀간의 간격
+		cellpadding = "12" : 셀의 벽과 내용과의 간격
+		
+		rowspan="3" : 액셀에서의 셀병합과 같은 개념 - 상하
+		colspan = 좌우
+		
+		align = "left|center|right" = 내용물이 좌우 정렬속성을 정한다
+		
+		width="400px" 셀의 폭을 결정할 수 있다(%로 주기도 )
+		같은 행과 열에 있는 것들은 자동으로 지정된 크기에 맞춰진다. = 일일이 모든 칸에 크기를 줄 필요가 없다.
+	-->
+	
+	<table border = "1" cellspacing = "0">
+		<tr bgColor = "#aabbcc">
+			<td width="40px" rowspan = "2"><font size="20px" face="impact">apple</font></td>
+			<td width="250px">banana</td>
+		</tr>
+		<tr bgColor = "#ccddee">
+			<td>kiwi</td>
+		</tr>
+		
+		<tr bgColor = "#ccddee">
+			<td align="center" colspan="2">kiwi</td>
+		</tr>
+		
+	</table>
+	
+</body>
+</html>

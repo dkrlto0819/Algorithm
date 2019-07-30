@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<!--
+    submit을 누르면, action에 지정된 페이지를 요청한다.
+    그런데 그냥 가는게 아니고 <input type="text" name="gul" size="50"> 이 내용을 물고 간다.
+    ===input에 입력된 정보를 물고 간다.
+
+    이 정보는 요청받은 servlet의 request.getParameter로 추출한다.
+    name에 지정된 값이 key값이 되는 것!!!
+
+    checkbox는 체크 후에 넘기면 value에 지정된 값이 넘어가고 체크 없이 넘기면 null 값을 읽게 된다.
+
+    여러줄을 입력할 때 textarea, <>얘는 디폴트값<>
+    row="7"는 상하크기, col="50"은 좌우크기(7줄 50글자)
+-->
+
+<form method="POST" action="form_test2">
+    <input type="text" name="gul" size="50" />
+    <input type="checkbox" name="abcd" value="apple" />
+    <input type="checkbox" name="xxyz" value="banana" />
+
+    <input type="radio" name="method" value="plus" checked="checked"/>
+    <input type="radio" name="method" value="minus" />
+
+    <input type="password" name="pwd" size="16" />
+
+    <br/>
+    <textarea rows="7" col="100" name="content"> HelloWorld</textarea>
+
+    <br /><br /><br />
+    <select name = "fruit">
+        <option value="apple">사과</option>
+        <option value="banana">바나나</option>
+        <option value="orange">오렌지</option>
+        <option value="kiwi">키위</option>
+    </select>
+
+    <input type="submit"/>
+</form>
+</body>
+</html>
